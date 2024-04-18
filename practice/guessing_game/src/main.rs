@@ -19,6 +19,7 @@ fn main(){
             .expect("Failed to read line");
     
         // let guess: u32 = guess.trim().parse().expect("Please type a number");
+        //trim()去掉首位的空白字符，parse()将字符串转为其它类型，返回的也是一个Result类型的值
         let guess: u32 = match guess.trim().parse(){
             Ok(num) => num,
             Err(_) => continue,
@@ -26,7 +27,7 @@ fn main(){
 
         println!("You guessed: {guess}");
     
-        match guess.cmp(&secret_number){
+        match guess.cmp(&secret_number){    //模式匹配 与 变量比较
             Ordering::Less => println!("Too small!"),
             Ordering::Greater => println!("Too big!"),
             Ordering::Equal => {
