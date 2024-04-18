@@ -25,10 +25,10 @@ cargo new programName //创建名为programName的项目
   同时生成以下内容：
   src         //源文件目录
     main.rs
-  .gitignore //相当于自动初始化了git仓库
+  .gitignore // git时忽略掉的文件内容
   Cargo.lock //用于确保构建是可重现的，无需手动修改 
   Cargo.toml //配置文件，可添加相关依赖
-
+  .git        //相当于自动初始化了git仓库
  */
 
 cargo build //编译并产生可执行文件，在./target/debug/目录下
