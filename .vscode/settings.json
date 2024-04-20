@@ -1,0 +1,5 @@
+{
+  "rust-analyzer.linkedProjects": [ //不在根目录时需要添加Cargo.toml的绝对路径来获得正确的workspace
+    "C:/Users/ZJW/Desktop/os-summer-of-code-daily/practice/minigrep/Cargo.toml"
+  ]
+}
