@@ -4,14 +4,9 @@ use std::process;
 use minigrep::Config;
 
 fn main() {
-    let args: Vec<String> = env::args().collect(); //收集命令行参数
-
-    //println!("{:?}",args);
-    // dbg!(args);
-
-    let config = Config::build(&args).unwrap_or_else(|err| {
-        eprintln!("Problem parsing arguments:{err}");
-        process::exit(1); //不同于panic，exit不会产生额外的输出
+    let config = Config::build(env::args()).unwrap_or_else(|err|{
+      eprintln!("Problem parsing arguments:{err}");
+      process::exit(1);
     });
 
     // println!("Searching for {}", config.query);
